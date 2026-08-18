@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Ansh Jain — BCA student focused on Data Analytics, Generative AI, Machine Learning and Software Development.">
+<title>Ansh Jain — Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#07070a;--panel:#101116;--text:#f5f5f7;--muted:#a4a7b0;--line:rgba(255,255,255,.10);--accent:#8b7cff;--accent2:#38d9ff;--max:1160px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;background:radial-gradient(circle at 75% 10%,rgba(139,124,255,.16),transparent 28%),radial-gradient(circle at 10% 35%,rgba(56,217,255,.08),transparent 25%),var(--bg);color:var(--text);line-height:1.6}
+a{color:inherit;text-decoration:none}
+.container{width:min(var(--max),calc(100% - 40px));margin:auto}
+nav{position:fixed;top:16px;left:50%;transform:translateX(-50%);width:min(940px,calc(100% - 28px));z-index:20;padding:12px 16px;border:1px solid var(--line);background:rgba(12,12,16,.72);backdrop-filter:blur(18px);border-radius:18px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 12px 50px rgba(0,0,0,.28)}
+.logo{font-family:"Space Grotesk";font-weight:700;font-size:18px}.logo span{color:var(--accent)}
+.navlinks{display:flex;gap:22px;color:#c7c9d1;font-size:13px}.navlinks a:hover{color:#fff}
+.hero{min-height:100vh;display:grid;align-items:center;padding:150px 0 90px;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;width:520px;height:520px;right:-160px;top:80px;border-radius:50%;background:radial-gradient(circle,rgba(139,124,255,.18),transparent 68%);filter:blur(10px)}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:7px 11px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.035);color:#c9cad2;font-size:12px;margin-bottom:22px}
+.dot{width:7px;height:7px;border-radius:50%;background:#55e39a;box-shadow:0 0 14px #55e39a}
+h1{font-family:"Space Grotesk";font-size:clamp(52px,8vw,94px);line-height:.98;letter-spacing:-.065em;max-width:900px}
+.gradient{background:linear-gradient(110deg,#fff 15%,#a69cff 48%,#52ddff 82%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{max-width:700px;color:var(--muted);font-size:18px;margin:25px 0 30px}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn{padding:13px 18px;border-radius:12px;border:1px solid var(--line);font-weight:600;font-size:14px;transition:.2s}
+.btn.primary{background:#fff;color:#09090b;border-color:#fff}.btn:hover{transform:translateY(-2px)}
+.btn.secondary{background:rgba(255,255,255,.04)}
+.meta{display:flex;gap:26px;flex-wrap:wrap;margin-top:45px;color:#858893;font-size:12px}.meta strong{color:#ddd}
+section{padding:110px 0}.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:36px}.kicker{color:#8f92a0;font-size:12px;text-transform:uppercase;letter-spacing:.16em}.section-head h2{font-family:"Space Grotesk";font-size:42px;letter-spacing:-.04em;margin-top:7px}.section-head p{max-width:470px;color:var(--muted);font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.018));border:1px solid var(--line);border-radius:22px;padding:25px;min-height:220px;transition:.25s;position:relative;overflow:hidden}
+.card:after{content:"";position:absolute;inset:auto -30px -60px;width:160px;height:160px;border-radius:50%;background:rgba(139,124,255,.10);filter:blur(25px)}
+.card:hover{transform:translateY(-5px);border-color:rgba(139,124,255,.4)}
+.card-num{font-size:12px;color:#777b87;margin-bottom:30px}.card h3{font-family:"Space Grotesk";font-size:22px;margin-bottom:9px}.card p{color:var(--muted);font-size:14px}.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:20px}.tag{font-size:11px;color:#c8cad2;border:1px solid var(--line);padding:5px 8px;border-radius:999px;background:rgba(255,255,255,.025)}
+.skills{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.skill{padding:17px 18px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.025)}.skill b{font-size:13px}.skill span{display:block;color:var(--muted);font-size:13px;margin-top:4px}
+.timeline{border-left:1px solid var(--line);margin-left:8px;padding-left:26px}.item{position:relative;margin-bottom:32px}.item:before{content:"";position:absolute;left:-32px;top:8px;width:9px;height:9px;border-radius:50%;background:var(--accent);box-shadow:0 0 16px rgba(139,124,255,.8)}.item small{color:#7f828d}.item h3{font-family:"Space Grotesk";font-size:20px;margin:4px 0}.item p{color:var(--muted);font-size:14px}
+.achievement{display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:center;padding:30px;border:1px solid var(--line);border-radius:22px;background:linear-gradient(120deg,rgba(139,124,255,.10),rgba(255,255,255,.025))}
+.badge{width:60px;height:60px;border-radius:17px;display:grid;place-items:center;background:rgba(139,124,255,.15);font-size:26px}.achievement h3{font-family:"Space Grotesk";font-size:21px}.achievement p{color:var(--muted);font-size:14px}
+.contact{border:1px solid var(--line);border-radius:28px;padding:55px;background:radial-gradient(circle at 80% 20%,rgba(56,217,255,.12),transparent 28%),linear-gradient(135deg,rgba(139,124,255,.12),rgba(255,255,255,.025))}
+.contact h2{font-family:"Space Grotesk";font-size:48px;letter-spacing:-.045em;max-width:680px}.contact p{color:var(--muted);max-width:650px;margin:14px 0 26px}.links{display:flex;flex-wrap:wrap;gap:10px}.links a{padding:10px 14px;border:1px solid var(--line);border-radius:11px;font-size:13px}
+footer{padding:30px 0 45px;color:#666a75;font-size:12px;display:flex;justify-content:space-between}
+@media(max-width:800px){.navlinks{display:none}.grid{grid-template-columns:1fr}.skills{grid-template-columns:1fr}.section-head{display:block}.section-head p{margin-top:12px}.contact h2{font-size:38px}section{padding:80px 0}.hero{padding-top:130px}.hero p{font-size:16px}}
+</style>
+</head>
+<body>
+<nav><a class="logo" href="#">AJ<span>.</span></a><div class="navlinks"><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#education">Education</a><a href="#contact">Contact</a></div></nav>
+
+<header class="hero">
+<div class="container">
+<div class="eyebrow"><span class="dot"></span> Open to internships & opportunities</div>
+<h1>Building with <span class="gradient">code, data & AI.</span></h1>
+<p>I'm <strong>Ansh Jain</strong>, a BCA student exploring Data Analytics, Generative AI, Machine Learning and Software Development — with a focus on turning ideas into practical digital solutions.</p>
+<div class="actions">
+<a class="btn primary" href="#projects">View my work ↗</a>
+<a class="btn secondary" href="assets/Ansh-Jain-Resume.pdf" target="_blank">View Resume</a>
+</div>
+<div class="meta"><span><strong>BCA</strong> · Galgotias University</span><span><strong>Expected</strong> May 2027</span><span><strong>Based</strong> Noida, India</span></div>
+</div>
+</header>
+
+<main>
+<section id="about"><div class="container"><div class="section-head"><div><div class="kicker">01 — About</div><h2>A curious builder.</h2></div><p>I enjoy learning technologies by applying them to real problems and academic projects.</p></div><div class="card" style="min-height:auto"><p style="font-size:16px;max-width:850px">I have hands-on exposure to software development, Generative AI, Data Analysis, Machine Learning and database management. My current foundation includes Python, C++, HTML, CSS, JavaScript, SQL/DBMS and Excel. I value problem-solving, teamwork, adaptability and continuous learning.</p></div></div></section>
+
+<section id="skills"><div class="container"><div class="section-head"><div><div class="kicker">02 — Skills</div><h2>My toolkit.</h2></div><p>A growing technical stack built through coursework, projects and continuous practice.</p></div>
+<div class="skills">
+<div class="skill"><b>Programming</b><span>C++, Python</span></div>
+<div class="skill"><b>Web Development</b><span>HTML5, CSS3, JavaScript</span></div>
+<div class="skill"><b>Data & AI</b><span>Data Analysis, Machine Learning, Generative AI</span></div>
+<div class="skill"><b>Databases</b><span>SQL, DBMS, Relational Databases</span></div>
+<div class="skill"><b>Tools</b><span>Microsoft Excel, GitHub</span></div>
+<div class="skill"><b>Professional</b><span>Problem-Solving, Collaboration, Time Management, Adaptability</span></div>
+</div></div></section>
+
+<section id="projects"><div class="container"><div class="section-head"><div><div class="kicker">03 — Selected Work</div><h2>Projects with purpose.</h2></div><p>Selected projects and concepts from my learning journey.</p></div>
+<div class="grid">
+<div class="card"><div class="card-num">01 / AI + Career</div><h3>ATS Score Checker</h3><p>A resume-analysis project concept focused on evaluating resumes against job requirements and surfacing areas for improvement.</p><div class="tags"><span class="tag">Python</span><span class="tag">AI/NLP</span><span class="tag">Resume Analysis</span></div></div>
+<div class="card"><div class="card-num">02 / Data</div><h3>Data Analytics Projects</h3><p>Academic work involving exploratory data analysis, machine learning fundamentals and database-oriented problem solving.</p><div class="tags"><span class="tag">Data Analysis</span><span class="tag">ML</span><span class="tag">SQL</span></div></div>
+<div class="card"><div class="card-num">03 / Sustainability</div><h3>Blackdot Scrap</h3><p>A project concept connecting customers who want to recycle old electronic devices with recycling solutions.</p><div class="tags"><span class="tag">E-waste</span><span class="tag">App Concept</span><span class="tag">Sustainability</span></div></div>
+</div></div></section>
+
+<section id="education"><div class="container"><div class="section-head"><div><div class="kicker">04 — Education</div><h2>Learning the fundamentals.</h2></div></div>
+<div class="timeline">
+<div class="item"><small>2024 — May 2027 (Expected)</small><h3>Galgotias University · BCA</h3><p>Greater Noida, Uttar Pradesh · Coursework includes Data Structures & Algorithms, OOP, Database Systems, Python, Machine Learning Fundamentals and Data Analysis Basics.</p></div>
+<div class="item"><small>Completed March 2024</small><h3>Delhi Public School GBN</h3><p>Noida, Uttar Pradesh · Senior Secondary Education — Commerce with Mathematics.</p></div>
+</div></div></section>
+
+<section><div class="container"><div class="kicker" style="margin-bottom:15px">05 — Achievement</div><div class="achievement"><div class="badge">✦</div><div><h3>Academic Scholar Award</h3><p>Recognized as a Scholar for 5 consecutive years in school for outstanding academic performance.</p></div></div></div></section>
+
+<section id="contact"><div class="container"><div class="contact"><div class="kicker">06 — Contact</div><h2>Let's build something useful.</h2><p>I'm open to internships, collaborations, learning opportunities and entry-level roles across software, data and AI.</p><div class="links"><a href="mailto:janshjain2000@gmail.com">Email me ↗</a><a href="https://www.linkedin.com/in/ansh-jain-3933782b6/" target="_blank">LinkedIn ↗</a><a href="https://github.com/14ansh" target="_blank">GitHub ↗</a></div></div></div></section>
+</main>
+<footer class="container"><span>© 2026 Ansh Jain</span><span>Built with curiosity & code.</span></footer>
+</body>
+</html>
